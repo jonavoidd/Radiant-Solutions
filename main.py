@@ -43,15 +43,20 @@ while True:
 
     if user == customer:
         print('\n\nWelcome to our humble establishment our valued guest!')
-        print('1 --- Order \n2 --- Exit')
-        print('Choose between 1 or 2')
-        customer_action = int(input('Enter 1 or 2 '))
+        print('\n\n1 --- Order \n2 --- Exit')
+        print('\n\nChoose between 1 or 2')
+        customer_action = int(input('\nEnter 1 or 2 '))
 
         if customer_action == 1:
-            print("Which do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
-            customer_choice = int(input('Choose between 1 and 2'))
+            print("\n\nWhich do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
+            customer_choice = int(input('\nChoose between 1 and 2 '))
 
-        if customer_action == 2:
+            if customer_choice == 1 :
+                print('1 --- main dish \n2 --- side dish \n3 --- desserts \n4 --- exit')
+            else:
+                print('1 --- caffeine \n2 --- juice \n3 --- softdrinks \n4 --- alcoholic')
+
+        else:
             break
 
         break
