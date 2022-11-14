@@ -41,22 +41,40 @@ while True:
                 break
         break
 
-    if user == customer:
+    elif user == customer:
         print('\n\nWelcome to our humble establishment our valued guest!')
         print('\n\n1 --- Order \n2 --- Exit')
-        print('\n\nChoose between 1 or 2')
+        print('\nChoose between 1 or 2')
         customer_action = int(input('\nEnter 1 or 2 '))
 
         if customer_action == 1:
             print("\n\nWhich do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
-            customer_choice = int(input('\nChoose between 1 and 2 '))
+            customer_choice = int(getpass('\nChoose between 1 and 2 '))
 
             if customer_choice == 1 :
                 print('1 --- main dish \n2 --- side dish \n3 --- desserts \n4 --- exit')
+                customer_food = int(getpass())
+                if customer_food == 1:
+                    break
+                elif customer_food == 2:
+                    break
+                elif customer_food == 3:
+                    break
+                else:
+                    break
             else:
                 print('1 --- caffeine \n2 --- juice \n3 --- softdrinks \n4 --- alcoholic')
+                customer_drink = int(getpass())
+                if customer_drink == 1:
+                    break
+                elif customer_drink == 2:
+                    break
+                elif customer_drink == 3:
+                    break
+                else:
+                    break
 
         else:
             break
 
-        break
+    break
