@@ -16,6 +16,7 @@ print('1 --- Admin ---\n2--- Customer ---\n')
 user = int(getpass('Choose between 1 or 2:'))
 
 while True:
+    # admin access
     if user == admin:
         while attempts < 3:
             pwd = str(getpass('\nPlease enter password: '))
@@ -28,7 +29,7 @@ while True:
 
             print('\n\n1 --- Bills\n2 --- Profits\n3 --- Sales\n4 --- Exit')
 
-            admin_action = int(getpass('\nWhich do you want to enter? '))
+            admin_action = int(getpass(''))
         
             #using break for now as we wait for the data, i.e prices of foods, etc.
             if admin_action == 1:
@@ -41,15 +42,16 @@ while True:
                 break
         break
 
+    # customer access
+    # prompt customer to choose between order or exit
     elif user == customer:
         print('\n\nWelcome to our humble establishment our valued guest!')
         print('\n\n1 --- Order \n2 --- Exit')
-        print('\nChoose between 1 or 2')
-        customer_action = int(input('\nEnter 1 or 2 '))
+        customer_action = int(getpass(''))
 
         if customer_action == 1:
             print("\n\nWhich do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
-            customer_choice = int(getpass('\nChoose between 1 and 2 '))
+            customer_choice = int(getpass(''))
 
             if customer_choice == 1 :
                 print('1 --- main dish \n2 --- side dish \n3 --- desserts \n4 --- exit')
