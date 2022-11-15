@@ -5,6 +5,7 @@ from getpass import getpass
 admin = 1
 password = 'password'
 customer = 2
+customer_payment = 0
 
 # number of attempts admin can try to log in
 attempts = 0 

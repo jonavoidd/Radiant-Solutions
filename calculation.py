@@ -1,5 +1,6 @@
 def payment():
     money = float(input("Please enter your payment: "))
+    print(f'you paid {money}')
 
 def total():
     cost = float(input("Your total payment is: "))
