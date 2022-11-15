@@ -1,5 +1,6 @@
 from food import Food
 from getpass import getpass
+from drinks import *
 
 # initializing to ask wether user is admin and ask for it's password and ask if user is customer
 admin = 1
@@ -13,14 +14,15 @@ attempts = 0
 # the business's tax
 tax = 100/.12
 
-print('1 --- Admin ---\n2--- Customer ---\n')
-user = int(getpass('Choose between 1 or 2:'))
+print('[1] Admin \n[2] Customer \n[3] Exit')
+user = int(input('Choose between 1 or 2: '))
 
-while True:
+while user != 3:
     # admin access
     if user == admin:
         while attempts < 3:
             pwd = str(getpass('\nPlease enter password: '))
+
             if pwd == password:
                 print('\n\nWelcome back admin.')
             else:               
@@ -51,12 +53,13 @@ while True:
         customer_action = int(getpass(''))
 
         if customer_action == 1:
-            print("\n\nWhich do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
+            print("\n\nWhat2 do you want ma'am/sir? \n1 --- Food \n2 --- Beverage")
             customer_choice = int(getpass(''))
 
             if customer_choice == 1 :
                 print('1 --- main dish \n2 --- side dish \n3 --- desserts \n4 --- exit')
-                customer_food = int(getpass())
+                customer_food = int(getpass(''))
+
                 if customer_food == 1:
                     break
                 elif customer_food == 2:
@@ -65,19 +68,30 @@ while True:
                     break
                 else:
                     break
-            else:
+            elif customer_choice == 2:
                 print('1 --- caffeine \n2 --- juice \n3 --- softdrinks \n4 --- alcoholic')
-                customer_drink = int(getpass())
+                customer_drink = int(getpass(''))
+
                 if customer_drink == 1:
-                    break
+                    print(f'Salted Caramel = {salted_caramel.get_price()} \
+                        \nVanilla Sweet Cream = {van_sweet_cream.get_price()} \
+                        \nHot Choco = {hot_choco.get_price()} \
+                        \nWhite Hot Choco = {white_hot_choco.get_price()} \
+                        \nIced Choco = {iced_choco.get_price()} \
+                        \nsteamed milk = {steamed_milk.get_price()}')
+                        
                 elif customer_drink == 2:
                     break
                 elif customer_drink == 3:
                     break
                 else:
                     break
+            else:
+                print('Invalid input')
 
         else:
             break
 
     break
+
+print('\nThank you for using our program. Hope to see you again!')
