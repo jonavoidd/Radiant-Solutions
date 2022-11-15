@@ -38,3 +38,4 @@ chivas_regal = Drinks(300, 'shot')
 jack_daniels = Drinks(320, 'shot')
 hennessy = Drinks(500, 'shot')
 the_botanist = Drinks(550, 'shpt')
+
