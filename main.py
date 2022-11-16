@@ -1,4 +1,5 @@
-from food import Food
+
+from food import *
 from getpass import getpass
 from drinks import *
 
@@ -57,16 +58,93 @@ while user != 3:
             customer_choice = int(getpass(''))
 
             if customer_choice == 1:
-                print('[1] Main dish \n[2] Side dish \n[3] Desserts \n[4] Exit')
+                print('[1] Main dish \n[2] Side dish \n[3] Desserts \n[4] Pastas \n [5] Exit')
                 customer_food = int(getpass(''))
 
                 if customer_food == 1:
-                    break
+                    print(f'[1] Butter Chicken = {butter_chicken.get_price()} \
+                        \n[2] Spicy Pork Vindaloo = {spicy_pork_vindaloo.get_price()} \
+                        \n[3] Sticky Tamarind Chicken = {sticky_tamarind_chicken.get_price()} \
+                        \n[4] Palak Paneer = {palak_paneer.get_price()} \
+                        \n[5] Crispy Pata = {crispy_pata.get_price()}')
+
+                    user_chose_mainDish = int(getpass(''))   
+                    if user_chose_mainDish == 1:
+                        customer_payment += butter_chicken.get_price()
+                    elif user_chose_mainDish == 2:
+                        customer_payment += spicy_pork_vindaloo.get_price()
+                    elif user_chose_mainDish == 3:
+                        customer_payment += sticky_tamarind_chicken.get_price()
+                    elif user_chose_mainDish == 4:
+                        customer_payment += palak_paneer.get_price()
+                    elif user_chose_mainDish == 5:
+                        customer_payment += crispy_pata.get_price()
+                    else:
+                        print("Invalid Input")
+
                 elif customer_food == 2:
-                    break
+                    print(f'[1] Green Salad = {green_salad.get_price()} \
+                        \n[2] Roasted Veggies = {roasted_veggies.get_price()} \
+                        \n[3] Mashed Potatoes = {mashed_potatoes.get_price()} \
+                        \n[4] Green Beans = {green_beans.get_price()} \
+                        \n[5] Pickled Beets = {pickled_beets.get_price()}')
+                    
+                    user_chose_sideDish = int(getpass(''))
+                    if user_chose_sideDish == 1:
+                        customer_payment += green_salad.get_price()
+                    elif user_chose_sideDish == 2:
+                        customer_payment += roasted_veggies.get_price()
+                    elif user_chose_sideDish == 3:
+                        customer_payment += mashed_potatoes.get_price()
+                    elif user_chose_sideDish == 4:
+                        customer_payment += green_beans.get_state()
+                    elif user_chose_sideDish == 5:
+                        customer_payment += pickled_beets.get_price()
+                    else:
+                        print("Invalid Input")
+
                 elif customer_food == 3:
-                    break
+                    print(f'[1] Brownie Sundae =  {brownie_sundae.get_price()} \
+                        \n[2] Coffee Pie = {coffee_pie.get_price()} \
+                        \n[3] Leche Flan = {leche_flan.get_price()} \
+                        \n[4] Grasshopper Pie = {grasshopper_pie.get_price()} \
+                        \n[5] Hazzlenut Pops = {hazzlenut_pops.get_price()}')
+
+                    user_chose_desserts = int(getpass(''))
+                    if user_chose_desserts == 1:
+                        customer_payment += brownie_sundae.get_price()
+                    elif user_chose_desserts == 2:
+                        customer_payment += coffee_pie.get_price()
+                    elif user_chose_desserts == 3:
+                        customer_payment += leche_flan.get_price()
+                    elif user_chose_desserts == 4:
+                        customer_payment += grasshopper_pie.get_price()
+                    elif user_chose_desserts == 5:
+                        customer_payment += hazzlenut_pops.get_price()
+                    else:
+                        print("Invalid Input")
+
                 elif customer_food == 4:
+                    print(f'[1] Lasagne = {lasagne.get_price()} \
+                        \n[2] Carbonara = {carbonara.get_price()} \
+                        \n[3] Vegetable Pasta = {vegetable_pasta.get_price()} \
+                        \n[4] Ravioli = {ravioli.get_portion()} \
+                        \n[5] Macaroni Cheese = {macaroni_cheese.get_price()}')
+
+                    user_chose_pastas = int(getpass(''))
+                    if user_chose_pastas == 1:
+                        customer_payment += lasagne.get_price()
+                    elif user_chose_pastas == 2:
+                        customer_payment += carbonara.get_price()
+                    elif user_chose_pastas == 3:
+                        customer_payment += vegetable_pasta.get_price()
+                    elif user_chose_pastas == 4:
+                        customer_payment += ravioli.get_price()
+                    elif user_chose_pastas == 5:
+                        customer_payment += macaroni_cheese.get_price()
+                    else:
+                        print("Invalid Input")
+                elif customer_food ==5:
                     break
                 else:
                     print('Invalid input')
