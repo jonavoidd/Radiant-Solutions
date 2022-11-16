@@ -26,8 +26,8 @@ crispy_pata= Food(300,'serve','hot')
 basmati_rice= Food(50,'cup','hot')
 scallion_rice= Food(50,'cup','hot')
 white_rice= Food(50,'cup','hot')
-mexican_rice= Food(50,'cup','hot)
-pickled_rice= Food(50,'cup','hot)
+mexican_rice= Food(50,'cup','hot')
+pickled_rice= Food(50,'cup','hot')
 
 
 #side_dish
@@ -42,7 +42,7 @@ pickled_beets= Food(120,'serve','hot')
 lasgna= Food(150,'serve','hot')
 carbonara= Food(150,'serve','hot')
 vegetable_pasta= Food(150,'serve','hot')
-ravioli= Food(150,'serve'.'hot')
+ravioli= Food(150,'serve','hot')
 macaroni_cheese= Food(150,'serve','hot')
 
     
