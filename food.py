@@ -39,7 +39,7 @@ pickled_beets= Food(120,'serve','hot')
      
     
 #pastas
-lasgna= Food(150,'serve','hot')
+lasagne= Food(150,'serve','hot')
 carbonara= Food(150,'serve','hot')
 vegetable_pasta= Food(150,'serve','hot')
 ravioli= Food(150,'serve','hot')
@@ -68,17 +68,3 @@ coffee_pie= Food(120,'serve','cold')
 leche_flan= Food(120,'serve','cold')
 grasshopper_pie= Food(120,'serve','cold')
 hazzlenut_pops= Food(120,'serve','cold')
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
