@@ -38,8 +38,8 @@ while user != 3:
             #using break for now as we wait for the data, i.e prices of foods, etc.
             if admin_action == 1:
                 print(f'BILLS \nElectric: {electricity.get_bills()} \
-                    \nWater: {electricity.get_bills()}')
-                    
+                    \nWater: {water.get_bills()}')
+
             elif admin_action == 2:
                 break
             elif admin_action == 3:
