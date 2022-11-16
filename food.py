@@ -1,3 +1,5 @@
+# # Module containing the class for foods and the foods
+
 class Food:
     def __init__(self, price, portion, state):
         self.price = price 

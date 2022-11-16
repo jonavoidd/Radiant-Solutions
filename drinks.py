@@ -1,3 +1,5 @@
+# Module containing the class for drinks and the drinks
+
 class Drinks:
     def __init__(self, price, state):
         self.price = price

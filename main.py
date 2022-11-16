@@ -2,6 +2,7 @@ from food import *
 from getpass import getpass
 from drinks import *
 from tax import tax_calcu
+from bills import *
 
 # initializing to ask wether user is admin and ask for it's password and ask if user is customer
 admin = 1
@@ -36,7 +37,9 @@ while user != 3:
         
             #using break for now as we wait for the data, i.e prices of foods, etc.
             if admin_action == 1:
-                break
+                print(f'BILLS \nElectric: {electricity.get_bills()} \
+                    \nWater: {electricity.get_bills()}')
+                    
             elif admin_action == 2:
                 break
             elif admin_action == 3:
