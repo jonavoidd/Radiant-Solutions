@@ -17,4 +17,4 @@ while ask_toPay():
     money_needed = total()
     money_left = money_given - money_needed
     new_money = round(money_left, 2)
-    print("You have ₱{new_money} left. ")
+    print(f"You have ₱{new_money} left. ")
