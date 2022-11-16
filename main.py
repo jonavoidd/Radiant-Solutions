@@ -21,14 +21,16 @@ while user != 3:
     # admin access
     if user == admin:
         while attempts < 3:
-            pwd = str(getpass('\nPlease enter password: '))
-
-            if pwd == password:
-                print('\n\nWelcome back admin.')
-            else:               
-                print('\n\nWrong password! You only get  three chances to enter correct password.')
-                attempts += 1  
-                continue
+            try:
+                pwd = str(getpass('\nPlease enter password: '))
+                if pwd == password:
+                    print('\n\nWelcome back admin.')
+                else:               
+                    print('\n\nWrong password! You only get  three chances to enter correct password.')
+                    attempts += 1  
+                    continue
+            except:
+                print('Please check your input')
 
             print('\n\n[1] Bills\n[2] Profits\n[3] Sales\n[4] Exit')
 
