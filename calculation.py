@@ -1,20 +1,19 @@
 def payment():
-    money = float(input("Please enter your payment: "))
-    print(f'you paid {money}')
-
-def total():
-    cost = float(input("Your total payment is: "))
+    money = float(input())
 
 def ask_toPay():
     ready = input("Ready to pay? Type 'No' to end: ")
-    if ready == 'No':
+    if ready == 'No' or ready == 'no':
         return False
     else:
         return True
-        
-while ask_toPay():
-    money_given = payment()
-    money_needed = total()
-    money_left = money_given - money_needed
-    new_money = round(money_left, 2)
-    print(f"You have ₱{new_money} left. ")
+
+    ctr = 0
+    while ctr <= 1:    
+        while ask_toPay() is True:
+            money_given = payment()
+            money_needed = customer_payment
+            money_left = money_given - money_needed
+            new_money = round(money_left, 2)
+            print(f'₱{new_money} is your change.')
+        ctr += 1

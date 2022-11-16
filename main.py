@@ -261,6 +261,15 @@ while user != 3:
         else:
             break
 
-    print(customer_payment)
-    print('\nThank you for using our program. Hope to see you again!')
+    print(f'Your total bill is {customer_payment}')
+    payment = float(input('Please enter your money: '))
+    change = payment - customer_payment
+    if change > 0:
+        print(f'Your change is {change}')
+    else:
+        print('Not enough money!')
+        
+    print('\n\nThank you for using our program. Hope to see you again!')
     break
+
+        
