@@ -37,7 +37,7 @@ while user != 3:
         
             # Actions an admin can do
             if admin_action == 1:
-                print(f'BILLS \nElectric: ₱{electricity.get_bills()} \
+                print(f'BILLS \n\nElectric: ₱{electricity.get_bills()} \
                     \nWater: ₱{water.get_bills()}')
                 break
 
@@ -61,6 +61,7 @@ while user != 3:
                 break
             else:
                 print('Invalid input')
+            break
         break
 
     # customer access
@@ -282,14 +283,18 @@ while user != 3:
             break
 
     print(f'Your total bill is ₱{round(customer_payment, 2)}')
-    payment = float(input('Please enter your money: ₱'))
-    change = payment - customer_payment
+    tries = 0
 
-    if change > 0:
-        print(f'Your change is ₱{round(change, 2)}')
-    else:
-        print(f'Not enough money! you need ₱{customer_payment - payment} more')
+    while tries < 3:
+        payment = float(input('Please enter your money: ₱'))
+        change = payment - customer_payment
+        if change >= 0:
+            print(f'Your change is ₱{round(change, 2)}')
+            break
+        else:
+            print(f'Not enough money! you need ₱{customer_payment - payment} more')
+            tries += 1
+            continue
         
     print('\n\nThank you for using our program. Hope to see you again!')
     break
-
