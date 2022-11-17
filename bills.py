@@ -15,4 +15,4 @@ def profit(sales, cost):
     return round((sales - cost), 2)
 
 def sale(sales):
-    return sales
+    return round(sales, 2)

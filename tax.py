@@ -10,4 +10,4 @@ def tax_calcu(income):
     else:
         tax = income * .30
 
-    print("you owe", tax, "pesos in tax!")
+    print(f'you owe {round(tax, 2)} pesos in tax!')

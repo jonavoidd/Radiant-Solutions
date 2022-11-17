@@ -56,7 +56,7 @@ while user != 3:
                 income = float(input("Please enter your monthly income: "))
                 tax_calcu(income)
                 continue
-            
+
             elif admin_action == 5:
                 break
             else:
@@ -75,9 +75,10 @@ while user != 3:
             customer_choice = int(getpass(''))
 
             if customer_choice == 1:
-                print('[1] Main dish \n[2] Side dish \n[3] Desserts \n[4] Exit')
+                print('[1] Main dish \n[2] Side dish \n[3] Desserts \n[4] Pasta \n[5] Exit')
                 customer_food = int(getpass(''))
 
+                # Options for main dish
                 if customer_food == 1:
                     print(f'[1] Butter Chicken = {butter_chicken.get_price()} \
                         \n[2] Spicy Pork Vindaloo = {spicy_pork_vindaloo.get_price()} \
@@ -99,6 +100,7 @@ while user != 3:
                     else:
                         print("Invalid Input")
 
+                # Options for side dish
                 elif customer_food == 2:
                     print(f'[1] Green Salad = {green_salad.get_price()} \
                         \n[2] Roasted Veggies = {roasted_veggies.get_price()} \
@@ -120,6 +122,7 @@ while user != 3:
                     else:
                         print("Invalid Input")
 
+                # Options for desserts
                 elif customer_food == 3:
                     print(f'[1] Brownie Sundae =  {brownie_sundae.get_price()} \
                         \n[2] Coffee Pie = {coffee_pie.get_price()} \
@@ -141,6 +144,7 @@ while user != 3:
                     else:
                         print("Invalid Input")
 
+                # Options for pastas
                 elif customer_food == 4:
                     print(f'[1] Lasagne = {lasagne.get_price()} \
                         \n[2] Carbonara = {carbonara.get_price()} \
@@ -171,6 +175,7 @@ while user != 3:
                 print('[1] Caffeine \n[2] Juice \n[3] Softdrinks \n[4] Alcoholic \n[5] Exit')
                 customer_drink = int(getpass(''))
 
+                # Options for caffeine
                 if customer_drink == 1:
                     print(f'[1] Salted Caramel = {salted_caramel.get_price()} \
                         \n[2] Vanilla Sweet Cream = {van_sweet_cream.get_price()} \
@@ -195,7 +200,7 @@ while user != 3:
                     else:
                         print('Invalid input')
 
-
+                # Options for Juice
                 elif customer_drink == 2:
                     print(f'[1] Iced Tea = {iced_tea.get_price()} \
                         \n[2] Four Seasons = {four_seasons.get_price()} \
@@ -214,6 +219,7 @@ while user != 3:
                     else:
                         print('Invalid input')
                 
+                # Options for softdrinks
                 elif customer_drink == 3:
                     print(f'[1] Coke = {coke.get_price()} \
                         \n[2] Sprite = {sprite.get_price()} \
@@ -229,6 +235,7 @@ while user != 3:
                     else:
                         print('Invalid input')
 
+                # Options for alcoholic beverages
                 elif customer_drink == 4:
                     print(f'[1] Kahlua = {kahlua.get_price()} \
                         \n[2] Grey Goose Vodka = {grey_goose.get_price()} \
@@ -259,6 +266,7 @@ while user != 3:
                     else:
                         print('Invalid input')
 
+                # To exit
                 elif customer_drink == 5:
                     break                
                 else:
@@ -273,11 +281,11 @@ while user != 3:
         else:
             break
 
-    print(f'Your total bill is {customer_payment}')
-    payment = float(input('Please enter your money: '))
+    print(f'Your total bill is {round(customer_payment, 2)}')
+    payment = float(round(input('Please enter your money: '), 2))
     change = payment - customer_payment
     if change > 0:
-        print(f'Your change is {change}')
+        print(f'Your change is {round(change, 2)}')
     else:
         print('Not enough money!')
         
