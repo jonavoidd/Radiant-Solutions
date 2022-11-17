@@ -37,19 +37,19 @@ while user != 3:
         
             # Actions an admin can do
             if admin_action == 1:
-                print(f'BILLS \nElectric: {electricity.get_bills()} \
-                    \nWater: {water.get_bills()}')
+                print(f'BILLS \nElectric: ₱{electricity.get_bills()} \
+                    \nWater: ₱{water.get_bills()}')
                 break
 
             elif admin_action == 2:
                 sales = float(input('Please enter your sales: '))
                 costs = float(input('Enter costs: '))
-                print(f'Your profit is {profit(sales, costs)}')
+                print(f'Your profit is ₱{profit(sales, costs)}')
                 break
 
             elif admin_action == 3:
                 sales = float(input('Please enter your sales: '))
-                print(f'Your sales is {sale(sales)}')
+                print(f'Your sales is ₱{sale(sales)}')
                 break
 
             elif admin_action == 4:
@@ -281,15 +281,15 @@ while user != 3:
         else:
             break
 
-    print(f'Your total bill is {round(customer_payment, 2)}')
-    payment = float(round(input('Please enter your money: '), 2))
+    print(f'Your total bill is ₱{round(customer_payment, 2)}')
+    payment = float(input('Please enter your money: ₱'))
     change = payment - customer_payment
+
     if change > 0:
-        print(f'Your change is {round(change, 2)}')
+        print(f'Your change is ₱{round(change, 2)}')
     else:
-        print('Not enough money!')
+        print(f'Not enough money! you need ₱{customer_payment - payment} more')
         
     print('\n\nThank you for using our program. Hope to see you again!')
     break
 
-        
