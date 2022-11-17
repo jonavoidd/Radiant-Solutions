@@ -1,14 +1,4 @@
 def tax_calcu(income):
- #   while True:
- #       try:
- #           income = float(input("Please enter your monthly income: "))
- #       except ValueError:
- #           print("Sorry, please enter taxable income as a number")
- #           continue
- #       else:
- #           break
-
-
     if income <= 10000:   
         tax = income * .05
 
