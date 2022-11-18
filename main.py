@@ -1,3 +1,12 @@
+# Leader:  Kurt Jonathan L. Gozano
+# Members: Sheena Mechaela Basiga
+#          Charles Mavrick Dabon
+#          Arzey Nepomuceno
+#          Justin Comendador
+
+
+
+
 from food import *
 from getpass import getpass
 from drinks import *
