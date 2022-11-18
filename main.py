@@ -20,37 +20,35 @@ while user != 3:
     # admin access
     if user == admin:
         while attempts < 3:
-            try:
-                pwd = str(getpass('\nPlease enter password: '))
-                if pwd == password:
-                    print('\n\nWelcome back admin.')
-                else:               
-                    print('\n\nWrong password! You only get  three chances to enter correct password.')
-                    attempts += 1  
-                    continue
-            except:
-                print('Please check your input')
 
+            pwd = str(getpass('\nPlease enter password: '))
+            if pwd == password:
+                print('\n\nWelcome back admin.')
+            else:               
+                print('\n\nWrong password! You only get  three chances to enter correct password.')
+                attempts += 1  
+                continue
+
+            # Actions an admin can do
             print('\n\n[1] Bills\n[2] Profits\n[3] Sales\n[4] Tax \n[5] Exit')
-
             admin_action = int(getpass(''))
         
-            # Actions an admin can do
             if admin_action == 1:
                 print(f'BILLS \n\nElectric: ₱{electricity.get_bills()} \
-                    \nWater: ₱{water.get_bills()}')
-                break
+                    \nWater: ₱{water.get_bills()} \
+                    \nYour total bill for the month is {electricity.get_bills()+water.get_bills()}')
+                continue
 
             elif admin_action == 2:
                 sales = float(input('Please enter your sales: '))
                 costs = float(input('Enter costs: '))
                 print(f'Your profit is ₱{profit(sales, costs)}')
-                break
+                continue
 
             elif admin_action == 3:
                 sales = float(input('Please enter your sales: '))
                 print(f'Your sales is ₱{sale(sales)}')
-                break
+                continue
 
             elif admin_action == 4:
                 income = float(input("Please enter your monthly income: "))
@@ -62,7 +60,9 @@ while user != 3:
             else:
                 print('Invalid input')
             break
+
         break
+
 
     # customer access
     # prompt customer to choose between order or exit
