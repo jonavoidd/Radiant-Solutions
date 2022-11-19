@@ -6,10 +6,3 @@ It has no GUI and will rely on console/terminal for accepting inputs and produci
 We are a group of 5 who are working together to develop this project.
 
 
-Members of the group:
-
-Leader:  Kurt Jonathan L. Gozano
-Members: Sheena Mechaela Basiga
-         Charles Mavrick Dabon
-         Arzey Nepomuceno
-         Justin Comendador
